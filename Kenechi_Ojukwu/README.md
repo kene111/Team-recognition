@@ -26,7 +26,7 @@ The video in question contains 700+ frames, which would take a considerable amou
 
 1) n_seconds: The video is a 30 second video, 1 second contains 25 frames, this algorithm takes 1 frame from the 25 frames for every second, this reduces the overall frame from 700 to 30 frames ... The tradeoff for this approach is overall speed vs accuracy. Accuracy in this case means accurately identifying unique players in the video, this is because of the discontinuity that may occur in selecting just one frame per second.
 
-2) n_frames: This approach selects key frames, then selects more frames in between these key frames. An example is, say for the video provided. There are 700 hundred plus frames. this algorithm takes keys frames, which will be the frame at position 0,100,200,300,400,500,600,700. Then proceeds to extract more frames between 0 to 100, 101 to 200 and so on. You can specify the number of frames to collect between key frames. This method is somewhat of an improvement of the n_seconds algorithm, tackling discontinuity but still trying to account for speed.
+2) n_frames: This approach selects key frames, then selects more frames in between these key frames. An example is, say for the video provided. There are 700 hundred plus frames. this algorithm takes keys frames, which will be the frames at position 0,100,200,300,400,500,600,700. Then proceeds to extract more frames between 0 to 100, 101 to 200 and so on. You can specify the number of frames to collect between key frames. This method is somewhat of an improvement of the n_seconds algorithm, tackling discontinuity but still trying to account for speed.
 
 
 ### Folder Structure of solution:
