@@ -1,6 +1,6 @@
 # Player Recognition
 
-This is the solution repository to the ParallelScore CVtask.
+This is the solution repository to the ParallelScore CV task.
 
 # Breakdown of approach taken:
 1) Identify Person(s) in video.
