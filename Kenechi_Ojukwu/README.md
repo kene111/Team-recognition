@@ -59,4 +59,4 @@ The approach works well for a baseline, but is open to improvements.
 
 
 ### Set Back:
-Due to a possible update of pytorch. There were so many issues between pytorch and detectron when building a docker image. Attempting to successuly resolve this took time and alot of internet resource. Hence no successful docker image was built for this task. If interested, access to the working code on google colab can be made available. 
+Due to a possible update of pytorch. There were so many issues between pytorch and detectron2 when building a docker image. Attempting to successuly resolve this took time and alot of internet resource. Hence no successful docker image was built for this task. If interested, access to the working code on google colab can be made available. 
