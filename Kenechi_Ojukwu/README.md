@@ -54,7 +54,7 @@ The approach works well for a baseline, but is open to improvements.
 ### Possible Improvments for this approach :
 1) Use deepsort for better tracking of unique players
 2) Improve image quality with filters after cropping it.
-3) Try out other feature extracting methods for the cropped images(images of players) to improve cluster performance.
+3) Try out other feature extracting methods for the cropped images(images of players) to improve clustering performance.
 
 
 
