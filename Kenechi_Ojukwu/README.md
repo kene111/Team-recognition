@@ -8,16 +8,16 @@ This is the solution repository to the ParallelScore CVtask.
 3) Extract unique person(s) from video.
 4) Seperate person(s) into two teams based on color of cloth.
 
-1) Identify Person(s) in Video:
+### Identify Person(s) in Video:
 The approach taken here was to use an object detecton model to detect all the objects that belong to the class "person" in the video. The detectron2 object detection framework was used. The pretrained version of the object detection model predicts for 80 classes per image. I retrained the pretrained model on just a dataset of people, hence reducing the classes from 80 to 1. The reason behind this is to improve the inferencing time, so if it takes 15 seconds to detect for 80 classes per image on a cpu only system, it reduces the time to around 3 seconds.
 
-2) Track unique Person(s):
+### Track unique Person(s):
 The Simple Online Real Time (SORT) tracker algorithm was used to track all the unique persons(players) in the video, although the accuracy of the tracker wasn't high enough, it did a moderately fair job in tracking players.
 
-3) Extract Persons from Video:
+### Extract Persons from Video:
 After the unique players have been detected for each image frame in the video, the coordinates of the unique person(s) are used to crop the image of the player. The image of the player is then saved in a directory.
 
-4) Seperate persons into two teams:
+### Seperate persons into two teams:
 The next stage is the seperation stage, here we seperate the the cropped images of the players into two teams using the color of their cloth. Two methods were used,
  Clustering and Color check. The clustering method was used to cluster the images based on the color present in the image ... This method worked well in clustering the yellow team but did poor on the blue. I then decided to use a color checking approach, which basically means that I check if the color blue is present in an image. This approach worked slightly well for the blue team.
  
@@ -49,9 +49,9 @@ python main.py --output_path _path_to_directory_
 ## if you want to try out video skipping algorithms:
 python main.py --output_path _path_to_directory_ --skip True --skip_type "n_frames"
 
-The application works well for a baseline sysem but is open to improvements.
+The approach works well for a baseline, but is open to improvements.
 
-### Possible Improvments:
+### Possible Improvments for this approach :
 1) Use deepsort for better tracking of unique players
 2) Improve image quality with filters after cropping it.
 3) Try out other feature extracting methods for the cropped images(images of players) to improve cluster performance.
